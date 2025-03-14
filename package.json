@@ -2,7 +2,6 @@
   "scripts": {
     "build": "[my-framework] build --output public"
   }
-}
 {
   "name": "cuphead-site",
   "version": "1.0.0",
