@@ -1,0 +1,94 @@
+@use 'variaveis';
+
+.header {
+    z-index: 1;
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: variaveis.$corFundoPrincipal;
+    box-shadow: 0px 3px 7px 0px #00000013;
+    padding: 8px 0;
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @media (max-width: 768px) {
+            display: none;
+        }
+
+        .header__logo {
+            max-width: 108px;
+            margin-left: 32px;
+        }
+
+        &__links {
+            display: flex;
+            align-items: center;
+
+            &__item {
+                margin-right: 32px;
+
+                a {
+                    font-size: 20px;
+                    font-weight: 700;
+                    text-decoration: none;
+                }
+
+                .button {
+                    padding: 8px 16px;
+                }
+            }
+        }
+    }
+
+    &__mobile {
+        display: none;
+
+        @media (max-width: 768px) {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        
+        &__links {
+            display: none;
+            text-align: center;
+            margin-top: 40px;
+            margin-left: 16px;
+            padding-bottom: 40px;
+
+            &--is-open {
+                display: block;
+            }
+
+            &__item {
+                
+                a {
+                    text-decoration: none;
+                }
+            }
+        }
+
+        .header__logo {
+            max-width: 108px;
+            margin-left: 0px;
+        }
+
+        &__toggle {
+            display: flex;
+            flex-direction: column;
+            cursor: pointer;
+            margin-top: 4px;
+            margin-right: 16px;
+
+            &__bar {
+                background-color: variaveis.$corTitulo;
+                height: 3px;
+                width: 25px;
+                margin: 3px 0;
+            }
+        }
+    }
+}

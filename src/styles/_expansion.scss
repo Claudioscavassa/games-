@@ -1,0 +1,49 @@
+@use 'variaveis';
+
+.expansion {
+    background-color: variaveis.$corFundoPrincipal;
+    
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 40px 0;
+
+        @media (max-width: 768px) {
+            display: block;
+            text-align: center;       
+        }
+        
+        &__image {
+            max-width: 55%;
+            width: 100%;
+            margin-right: 56px;
+
+            @media (max-width: 768px) {
+                margin: 0 0;      
+            }
+        }
+        
+        &__text {
+            margin-left: 40px;
+            margin-right: 56px;
+            text-align: right;
+
+            .title {
+                
+                margin-bottom: 16px;
+            }
+
+            .text {
+                margin-bottom: 32px;
+            }
+
+            .button {
+                display: block;
+                width: 170px;
+                margin: 0 auto;
+                
+            }
+        }
+    }
+}
